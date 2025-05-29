@@ -8,6 +8,7 @@ from io import BytesIO
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import requests
+import os
 
 router = APIRouter()
 
@@ -150,7 +151,7 @@ def actualizar_estado_tarea(
 
 router = APIRouter()    
 
-HF_TOKEN = "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"
+HF_TOKEN = os.getenv("HUGGINGFACE_API_TOKEN")
 API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
