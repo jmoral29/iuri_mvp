@@ -1,0 +1,12 @@
+# Entorno virtual
+venv/
+__pycache__/
+
+# Archivos de entorno y secretos
+.env
+*.db
+.coverage
+
+# Archivos de pruebas
+*.pyc
+pytest_cache/
